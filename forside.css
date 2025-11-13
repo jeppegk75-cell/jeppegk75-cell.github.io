@@ -1,0 +1,82 @@
+.header {
+  display: flex;
+  justify-content: center;   /* vandret */
+  align-items: center;       /* lodret */
+  min-height: 120px;         /* valgfrit – giver noget højde at centrere i */
+  text-align: center;        /* hvis overskriften får flere linjer */
+}
+
+body {
+  background-color: rgb(161, 173, 222);  /* dit billednavn */
+  background-size: cover;                 /* fylder hele skærmen */
+  background-repeat: no-repeat;           /* undgå gentagelse */
+  background-attachment: fixed;           /* gør at billedet ikke scroller */
+  background-position: center;            /* centrer billedet */
+}
+
+
+* {
+  box-sizing: border-box;
+}
+.family-wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.family-wrapper > a {
+  border: 6px solid rgb(2, 2, 2);
+  border-radius: 10px;
+  background-color: rgba(100, 81, 211, 0.5);
+  padding: 20px;
+  font-size: 100%;
+  color: #070707;
+  
+  display: flex;             /* aktiver flex inde i boksen */
+  flex-direction: column;    /* Gør at overskrift og tekst står oven på hinanden */
+  justify-content: flex-start;   /* vandret */
+  align-items: center;       /* lodret */
+  text-align: center;        /* multi-line tekst centreres også */
+  text-decoration: none;      /* fjerner understregning på links */
+}
+.family-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.family-wrapper > div h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.family-wrapper > div p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+
+/* Det er her jeg ændre i boxnes størrelser og former delt op i grid 1 helt tal = kkun det felt og 2/4 betyder start ved 2 og stræk sig til 4 */
+.Far {
+  grid-column: 1;
+  grid-row: 1;
+}
+.Mor {
+  grid-column: 2;
+  grid-row: 1;
+}
+.Storebror {
+  grid-column: 3;
+  grid-row: 1;
+}
+.Jeppe {
+  grid-column: 4;
+  grid-row: 1;
+}
+.Lillesøster {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+
+
+
