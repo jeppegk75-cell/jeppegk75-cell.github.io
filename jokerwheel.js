@@ -6,7 +6,7 @@ const resultEl = document.getElementById("jokerResult");
 
 // 12 felter: 6 røde (TAG), 6 blå (GIV)
 const values = [1,2,3,4,5,6, 1,2,3,4,5,6];
-const types  = ["TAG","TAG","TAG","TAG","TAG","TAG", "GIV","GIV","GIV","GIV","GIV","GIV"];
+const types  = ["TAG","TAG","TAG","TAG","TAG","KLAUS TAGER", "GIV","GIV","GIV","GIV","GIV","KLAUS TAGER"];
 
 const slices = values.length;
 const sliceAngle = (2 * Math.PI) / slices;

@@ -5,7 +5,7 @@ const spinBtn = document.getElementById("spinBtn");
 const resultText = document.getElementById("resultText");
 
 // Felter på hjulet (du kan ændre dem senere)
-const options = ["1", "2", "2", "3", "4", "7", "Bund"];
+const options = ["1", "2", "3", "2", "3", "1", "Bund"];
 const colors  = ["#f44336", "#4caf50", "#2196f3", "#ffeb3b", "#9c27b0", "#ff9800", "#00bcd4"];
 
 const slices = options.length;
