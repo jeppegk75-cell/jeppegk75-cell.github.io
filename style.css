@@ -162,5 +162,178 @@ body { margin: 0; }
 
 
 
+/* ====== GAME PAGE (Side 3) ====== */
+.game-page{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game-screen{
+  width: min(1000px, 100%);
+  height: calc(100vh - 32px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+}
+
+.game-header{
+  text-align: center;
+  padding: 10px 8px 0;
+}
+
+.game-header h1{
+  margin: 0;
+  font-size: clamp(24px, 6vw, 44px);
+}
+
+.game-header p{
+  margin: 6px 0 0;
+  font-size: clamp(13px, 3.8vw, 16px);
+  opacity: 0.9;
+}
+
+.game-main{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  align-items: stretch;
+  padding: 8px;
+  height: 100%;
+}
+
+/* På større skærme: plade til venstre, panel til højre */
+@media (min-width: 820px){
+  .game-main{
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+/* Pladen får egen scroll inde i boksen */
+.card-board{
+  background: rgba(255,255,255,0.25);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+  height: 100%;
+  overflow: auto;
+}
+
+.board-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+  gap: 10px;
+}
+
+/* Kort-felter */
+.card-tile{
+  border: 3px solid #000;
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px 6px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .08s ease, filter .08s ease, opacity .12s ease;
+}
+
+.card-tile:hover{
+  transform: scale(1.03);
+  filter: brightness(1.03);
+}
+
+.card-tile.used{
+  opacity: 0.35;
+  filter: grayscale(0.9);
+}
+
+.card-rank{
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.card-suit{
+  font-size: 18px;
+  margin-top: 2px;
+  line-height: 1;
+}
+
+.suit-red{ color: #c21616; }
+.suit-black{ color: #111; }
+
+/* Panel */
+.panel{
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+}
+
+.panel-top{
+  display: grid;
+  gap: 10px;
+}
+
+.panel-btn{
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 12px;
+  font-size: clamp(14px, 4vw, 18px);
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(0,0,0,.10);
+}
+
+.panel-btn.joker{
+  background: #8a87d8;
+  color: #111;
+  border: 3px solid #000;
+}
+
+.panel-btn.reset{
+  background: #222;
+  color: #fff;
+}
+
+.panel-btn.reset:disabled{
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.task-box{
+  background: rgba(255,255,255,0.35);
+  border: 3px solid #000;
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.task-title{
+  font-weight: 800;
+  font-size: clamp(16px, 4.5vw, 20px);
+}
+
+.task-text{
+  font-size: clamp(14px, 4vw, 18px);
+  line-height: 1.35;
+}
+
+.task-meta{
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.panel-hint{
+  font-size: 12px;
+  opacity: 0.85;
+  text-align: center;
+  padding: 4px 6px;
+}
+
+
 
 

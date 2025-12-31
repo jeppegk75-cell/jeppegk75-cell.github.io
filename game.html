@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spilleplade</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page game-page">
+  <div class="game-screen">
+
+    <header class="game-header">
+      <h1>Spillepladen</h1>
+      <p>Træk et fysisk kort, find det her, og tryk på det for at få opgaven.</p>
+    </header>
+
+    <main class="game-main">
+      <!-- 52 kort -->
+      <section class="card-board" aria-label="Kortplade">
+        <div id="board" class="board-grid"></div>
+      </section>
+
+      <!-- Opgave + knapper -->
+      <aside class="panel" aria-label="Opgavepanel">
+        <div class="panel-top">
+          <a class="panel-btn joker" href="wheel.html">🃏 Joker → Lykkehjul</a>
+          <button class="panel-btn reset" id="resetBtn" type="button" disabled>
+            🔄 Bland kortene og start ny runde
+          </button>
+        </div>
+
+        <div class="task-box" id="taskBox" aria-live="polite">
+          <div class="task-title">Opgave</div>
+          <div class="task-text" id="taskText">
+            Træk et fysisk kort og tryk på det tilsvarende kort her.
+          </div>
+          <div class="task-meta" id="taskMeta"></div>
+        </div>
+
+        <div class="panel-hint">
+          Tip: Hvis nogen ikke vil drikke, så byt “tårer” ud med vand/mini-udfordring.
+        </div>
+      </aside>
+    </main>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
