@@ -161,8 +161,7 @@ body { margin: 0; }
 }
 
 
-
-/* ====== GAME PAGE (Side 3) ====== */
+/* ====== GAME PAGE (Slagmarken) ====== */
 .game-page{
   height: 100vh;
   overflow: hidden;
@@ -201,7 +200,6 @@ body { margin: 0; }
   height: 100%;
 }
 
-/* På større skærme: plade til venstre, panel til højre */
 @media (min-width: 820px){
   .game-main{
     grid-template-columns: 1.2fr 0.8fr;
@@ -297,11 +295,6 @@ body { margin: 0; }
   color: #fff;
 }
 
-.panel-btn.reset:disabled{
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
 .task-box{
   background: rgba(255,255,255,0.35);
   border: 3px solid #000;
@@ -327,11 +320,75 @@ body { margin: 0; }
   opacity: 0.85;
 }
 
-.panel-hint{
-  font-size: 12px;
-  opacity: 0.85;
+/* ===== Scorekort ===== */
+.score-box{
+  background: rgba(255,255,255,0.28);
+  border: 3px solid #000;
+  border-radius: 14px;
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.score-title{
+  font-weight: 800;
+  font-size: clamp(14px, 4vw, 18px);
   text-align: center;
-  padding: 4px 6px;
+}
+
+.score-grid{
+  display: grid;
+  gap: 8px;
+}
+
+.score-row{
+  display: grid;
+  grid-template-columns: 1fr 46px 92px;
+  gap: 8px;
+  align-items: center;
+}
+
+.score-name{
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 12px;
+  border: 2px solid #000;
+  font-size: 14px;
+}
+
+.score-value{
+  text-align: center;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 10px 0;
+  border: 2px solid #000;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.35);
+}
+
+.score-actions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.score-btn{
+  border: 2px solid #000;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.score-btn:hover{
+  filter: brightness(0.95);
+}
+
+.small-reset{
+  padding: 10px 12px;
+  font-size: 14px;
 }
 
 

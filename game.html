@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spilleplade</title>
+  <title>Slagmarken</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,7 +11,7 @@
   <div class="game-screen">
 
     <header class="game-header">
-      <h1>Spillepladen</h1>
+      <h1>Slagmarken</h1>
       <p>Træk et fysisk kort, find det her, og tryk på det for at få opgaven.</p>
     </header>
 
@@ -21,13 +21,10 @@
         <div id="board" class="board-grid"></div>
       </section>
 
-      <!-- Opgave + knapper -->
+      <!-- Panel -->
       <aside class="panel" aria-label="Opgavepanel">
         <div class="panel-top">
-          <a class="panel-btn joker" href="wheel.html">🃏 Joker → Lykkehjul</a>
-          <button class="panel-btn reset" id="resetBtn" type="button" disabled>
-            🔄 Bland kortene og start ny runde
-          </button>
+          <a class="panel-btn joker" href="jokerwheel.html">🃏 Joker → Lykkehjul</a>
         </div>
 
         <div class="task-box" id="taskBox" aria-live="polite">
@@ -38,9 +35,75 @@
           <div class="task-meta" id="taskMeta"></div>
         </div>
 
-        <div class="panel-hint">
-          Tip: Hvis nogen ikke vil drikke, så byt “tårer” ud med vand/mini-udfordring.
+        <!-- Scorekort -->
+        <div class="score-box" aria-label="Scorekort">
+          <div class="score-title">Scorekort (tårer)</div>
+
+          <div class="score-grid" id="scoreGrid">
+            <div class="score-row" data-i="0">
+              <input class="score-name" type="text" placeholder="Tilføj spiller" />
+              <div class="score-value">0</div>
+              <div class="score-actions">
+                <button class="score-btn minus" type="button">−</button>
+                <button class="score-btn plus" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="score-row" data-i="1">
+              <input class="score-name" type="text" placeholder="Tilføj spiller" />
+              <div class="score-value">0</div>
+              <div class="score-actions">
+                <button class="score-btn minus" type="button">−</button>
+                <button class="score-btn plus" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="score-row" data-i="2">
+              <input class="score-name" type="text" placeholder="Tilføj spiller" />
+              <div class="score-value">0</div>
+              <div class="score-actions">
+                <button class="score-btn minus" type="button">−</button>
+                <button class="score-btn plus" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="score-row" data-i="3">
+              <input class="score-name" type="text" placeholder="Tilføj spiller" />
+              <div class="score-value">0</div>
+              <div class="score-actions">
+                <button class="score-btn minus" type="button">−</button>
+                <button class="score-btn plus" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="score-row" data-i="4">
+              <input class="score-name" type="text" placeholder="Tilføj spiller" />
+              <div class="score-value">0</div>
+              <div class="score-actions">
+                <button class="score-btn minus" type="button">−</button>
+                <button class="score-btn plus" type="button">+</button>
+              </div>
+            </div>
+
+            <div class="score-row" data-i="5">
+              <input class="score-name" type="text" placeholder="Tilføj spiller" />
+              <div class="score-value">0</div>
+              <div class="score-actions">
+                <button class="score-btn minus" type="button">−</button>
+                <button class="score-btn plus" type="button">+</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="panel-btn reset small-reset" id="resetScoresBtn" type="button">
+            Nulstil score
+          </button>
         </div>
+
+        <!-- Reset nederst (altid aktiv) -->
+        <button class="panel-btn reset" id="resetBtn" type="button">
+          🔄 Bland kortene og start ny runde
+        </button>
       </aside>
     </main>
 
@@ -49,3 +112,4 @@
   <script src="game.js"></script>
 </body>
 </html>
+

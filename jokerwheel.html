@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jokerhjul</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page">
+  <div class="screen">
+    <header class="header">
+      <h1>🃏 Jokerhjul</h1>
+      <p class="joker-sub">🔴 TAG selv • 🔵 GIV ud</p>
+    </header>
+
+    <main class="main">
+      <div class="wheel-wrap">
+        <div class="pointer" aria-hidden="true"></div>
+        <canvas id="jokerWheel" width="420" height="420"></canvas>
+      </div>
+
+      <button class="btn" id="jokerSpinBtn" type="button">Spin</button>
+
+      <p class="result" id="jokerResult" aria-live="polite"></p>
+
+      <a class="box-link small" href="game.html">Tilbage til Slagmarken</a>
+    </main>
+  </div>
+
+  <script src="jokerwheel.js"></script>
+</body>
+</html>
