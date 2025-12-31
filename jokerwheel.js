@@ -84,7 +84,7 @@ function spin(){
   const current = rotation % (2 * Math.PI);
   const finalRotation = (extraSpins * 2 * Math.PI) + targetAngle;
 
-  const duration = 2500;
+  const duration = 7000;
   const startTime = performance.now();
 
   function easeOutCubic(t){
